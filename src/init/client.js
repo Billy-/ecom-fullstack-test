@@ -6,7 +6,7 @@ import routes from '../routes';
 
 require('offline-plugin/runtime').install();
 
-ReactDOM.render(
+ReactDOM.hydrate(
     <Router routes={routes} history={browserHistory}/>,
     document.getElementById('app')
 );
