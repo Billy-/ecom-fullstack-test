@@ -1,5 +1,6 @@
 import path from 'path';
 import webpack from 'webpack';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 import baseConfig from './webpack.config.base.babel';
 
@@ -18,26 +19,33 @@ const config = Object.assign({}, baseConfig, {
         rules: (baseConfig.module.rules || []).concat([{
             test: /\.scss$/,
             exclude: /node_modules/,
-            use: [{
-                loader: 'style-loader'
-            }, {
-                loader: 'css-loader',
-                options: {
-                    minimize: false
-                }
-            }, {
-                loader: 'postcss-loader',
-                options: {
-                    config: path.resolve(__dirname, './')
-                }
-            }, {
-                loader: 'sass-loader'
-            }]
+            loader: ExtractTextPlugin.extract({
+                fallback: 'style-loader',
+                use: [{
+                    loader: 'css-loader',
+                    options: {
+                        minimize: false,
+                        modules: true,
+                        importLoaders: 2,
+                        localIdentName: '[path][name]__[local]--[hash:base64:5]'
+                    }
+                }, {
+                    loader: 'postcss-loader',
+                    options: {
+                        config: path.resolve(__dirname, './')
+                    }
+                }, {
+                    loader: 'sass-loader'
+                }]
+            })
         }])
     },
 
     plugins: (baseConfig.plugins || []).concat([
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new ExtractTextPlugin({
+            filename: '[name].[hash].css'
+        })
     ]),
 
     devtool: 'eval'

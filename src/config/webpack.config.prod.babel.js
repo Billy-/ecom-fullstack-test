@@ -19,7 +19,9 @@ const config = Object.assign({}, baseConfig, {
                 use: [{
                     loader: 'css-loader',
                     options: {
-                        minimize: true
+                        minimize: true,
+                        modules: true,
+                        importLoaders: 2
                     }
                 }, {
                     loader: 'postcss-loader',
