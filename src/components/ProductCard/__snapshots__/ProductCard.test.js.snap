@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductCard matches snapshot 1`] = `
+<div
+  className="card container"
+>
+  <img
+    alt="foo"
+    className="image"
+    src="foo"
+  />
+  <div
+    className="content"
+  >
+    <span
+      className="productLabel"
+    >
+      foo
+    </span>
+    <h3
+      className="title"
+    >
+      foo
+    </h3>
+    <p
+      className="description"
+    >
+      foo
+    </p>
+  </div>
+  <div
+    className="footer"
+  >
+    <span
+      className="priceContainer"
+    >
+      <span
+        className="priceLabel"
+      >
+        foo
+      </span>
+      <span
+        className="price"
+      >
+        $
+        99.99
+      </span>
+    </span>
+    <div
+      className="cta"
+      onClick={[Function]}
+    >
+      foo
+    </div>
+  </div>
+</div>
+`;

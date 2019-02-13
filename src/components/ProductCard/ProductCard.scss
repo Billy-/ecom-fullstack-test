@@ -1,0 +1,75 @@
+@import '../../sass/variables';
+
+$padding: 20px;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: $padding;
+}
+
+.image {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.productLabel {
+  background: $red;
+  color: $white;
+  padding: 5px 10px;
+  padding-left: $padding;
+  font-weight: bold;
+  // The reason I made this position absolute is
+  // so that each card will still be the same height,
+  // regardless of whether this element is present or not.
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.content {
+  position: relative;
+  padding: 0 $padding;
+  padding-top: 30px; // For abs pos productLabel
+}
+
+.title {
+  margin-bottom: 0;
+  font-size: 24px;
+}
+
+.description {
+  margin: ($padding * 2) 0;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.footer {
+  padding: 0 $padding;
+}
+
+.priceContainer {
+  display: block;
+  margin-bottom: $padding;
+}
+
+.priceLabel {
+  color: $grey;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.cta {
+  border: 6px solid $green;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+}
