@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App matches snapshot 1`] = `
+<section
+  className="container"
+>
+  <div
+    className="header"
+  >
+    Header Area
+  </div>
+  <main>
+    <div
+      className="container"
+    >
+      <h2>
+        Sorry, the page at "
+        blank
+        " was not found
+      </h2>
+    </div>
+  </main>
+  <div
+    className="footer"
+  >
+    Footer Area
+  </div>
+</section>
+`;
