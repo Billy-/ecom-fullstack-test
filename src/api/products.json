@@ -2,7 +2,7 @@
     "title": "Simple Canvas",
     "description": "Lets your pictures speak for themselves.",
     "image": {
-        "path": "/images/product.jpg",
+        "path": "/dist/images/product.jpg",
         "alt": "Simple Canvas"
     },
     "price": 1500,
@@ -15,7 +15,7 @@
     "title": "Collage Canvas",
     "description": "Can't choose just one pic? Put your favourite photos on one canvas - a collage.",
     "image": {
-        "path": "/images/product.jpg",
+        "path": "/dist/images/product.jpg",
         "alt": "Collage Canvas"
     },
     "price": 2500,
@@ -28,7 +28,7 @@
     "title": "Retro Canvas",
     "description": "A cool vintage look. For people. Places. And spaces.",
     "image": {
-        "path": "/images/product.jpg",
+        "path": "/dist/images/product.jpg",
         "alt": "Retro Canvas"
     },
     "price": 500,
@@ -41,7 +41,7 @@
     "title": "Desk Canvas",
     "description": "Our smallest canvas for your big moments.",
     "image": {
-        "path": "/images/product.jpg",
+        "path": "/dist/images/product.jpg",
         "alt": "Desk Canvas"
     },
     "price": 1250,
